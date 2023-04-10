@@ -112,26 +112,101 @@ int marcilio() {
       cout << "No treino, você não consegue desempenhar tão bem, e em campo, "
               "muito menos.\n";
       cout << "Então, o técnico decide te deixar no banco.\n";
-      cout << "Chateado com a decisão do técnico, você decide ir em uma festa "
-              "com seus colegas de equipe, para se divertir um pouco e "
-              "esquecer do ocorrido.\n";
-      cout << "Nessa noitada, você perde o controle, e bebe exageradamente.\n";
-      cout << "No outro dia, você se atrasa para o treino, e chega bebado.\n";
-      cout << "O técnico e o clube não gostam desse comportamento, e após uma "
-              "descussão entre você a comissão tecnica, decidem te desligar do "
-              "clube.\n";
-      cout << "Chegando assim, ao fim da sua carreira.\n";
+      cout << "Você pode:\n";
+      cout << "1 - Ir para uma festa com seus companheiros de equipe.\n";
+      cout << "2 - Treinar bastante.\n";
 
+      cin >> escolha;
+
+      // Se escolher ir para a festa
+      if (escolha == 1) {
+        cout << "Você aproveitou muito a noite com seus companheiros de "
+                "time, porem você exagerou na bebida e na noitada. Você "
+                "chegou atrasado no treino e praticamente não dormiu noite "
+                "passada.\n";
+        cout << " O técnico não gostou nenhum pouco de sua atitude e com "
+                "isso você perde as chances que tinha para seguir como "
+                "titular no time. -20 confiança\n";
+
+        cout << "A temporada do seu time acabou, você foi pouquissimo "
+                "aproveitado e decepciou bastante a diretoria do seu time, "
+                "que frustrada, decidiu encerrar o seu contrato como "
+                "profissional. Agora você está sem clube. \n";
+        cout << "O Seu agente tenta, porém não consegue nenhum clube "
+                "interessado em seu fuebol pelas suas recentes "
+                "escolhas.\n";
+        cout << "Este é o fim de sua carreira.\n";
+        return 0;
+      } else if (escolha == 2) {
+        // se escolher treinar bastante
+
+        cout << "Para melhorar, você tem que escolher entre:\n";
+        cout << "1 - Treinar no seus dias de folga.\n";
+        cout << "2 - Aproveitar seus dias de folga com a familia\n";
+
+        cin >> escolha;
+
+        // Se escolher treinar nos dias de folga.
+        if (escolha == 1) {
+          cout << "Na tentativa de melhorar, você acaba forcando muito seu "
+                  "corpo, e se lesiona, precisando ficar 4 meses parado.\n";
+          cout << "Com isso, o clube decide cancelar seu contrato, visto "
+                  "que estava dando só prejuizo.\n";
+
+          return 0;
+        } else if (escolha == 2) {
+          // Se escolher aproveitar os dias de folga com a familia
+
+          cout << "Na ultima partida do campeonato, você é escalado para bater "
+                  "o "
+                  "penalti decisivo do jogo.\n";
+          cout << "Você pode:\n";
+          cout << "1 - Direita.\n";
+          cout << "2 - Meio do Gol.\n";
+          cout << "3 - Esquerda.\n";
+
+          cin >> escolha;
+
+          // Se escolher direita ou meio do Gol
+          if (escolha == 1 || escolha == 2) {
+            cout << "Infelizmente o goleiro defende o penalti, levando o seu "
+                    "time a ser eliminado do campeonato.\n";
+            cout << "Com o péssimo acontecimento, sua carreira de atléta "
+                    "profissional chega ao fim.\n";
+
+            return 0;
+          } else if (escolha == 3) {
+            // Se escolher esquerda
+
+            cout << "Você acerta o gol, e seu time saí como campeão do "
+                    "campeonato.\n";
+            cout
+                << "Olhando para sua história, você vê tudo o que aconteceu, e "
+                   "decide se aposentar como um campeão.\n";
+
+            return 0;
+          } else {
+            cout << "Escolha Invalida!\n";
+            return 0;
+          }
+        } else {
+          cout << "Escolha Invalida!\n";
+          return 0;
+        }
+      } else {
+        cout << "Escolha Invalida.\n";
+        return 0;
+      }
       return 0;
     } else {
       cout << "Escolha Invalida!\n";
       return 0;
     }
-
+  } else if (escolha == 2) {
     /* Se escolher a opção 2 - Jogar como meio campista, recebendo um salário de
     dois mil reais, porém você terá concorrencia na vaga de titular e em alguns
     jogos você não será titular */
-  } else if (escolha == 2) {
+
     cout << "Parabéns!\n";
     cout << "Seu contrato foi assinado! O técnico deseja boa sorte na "
             "temporada e espera contar com você no decorrer dos jogos. \n";
@@ -167,8 +242,9 @@ int marcilio() {
         cout << "Com isso, o clube decide cancelar seu contrato, visto "
                 "que estava dando só prejuizo.\n";
         return 0;
-        // Se escolher aproveitar os dias de folga com a familia
       } else if (escolha == 2) {
+        // Se escolher aproveitar os dias de folga com a familia
+
         cout << "Na ultima partida do campeonato, você é escalado para bater o "
                 "penalti decisivo do jogo.\n";
         cout << "Você pode:\n";
@@ -188,6 +264,7 @@ int marcilio() {
           return 0;
         } else if (escolha == 3) {
           // Se escolher esquerda
+
           cout << "Você acerta o gol, e seu time saí como campeão do "
                   "campeonato.\n";
           cout << "Olhando para sua história, você vê tudo o que aconteceu, e "
@@ -206,6 +283,7 @@ int marcilio() {
       /* Se escolher aproveitar que está sendo pouco utilizado e aproveitar o
        * seu salario nas madrugadas de itajai, deixando de lado os treinos e
        * focando pouco nos jogos. */
+
       cout << "Nessa noite, os seus companheiros de time irão a uma festa "
               "essa noite e te convidaram para ir, disseram que a noitada "
               "não é a mesma sem a sua companhia. Você deseja ir? Com isso "
@@ -238,6 +316,7 @@ int marcilio() {
         return 0;
       } else if (escolha == 2) {
         // Se escolher não ir para festa
+
         cout << "O que você deseja fazer? \n";
 
         cout << "1 - Focar apenas no treino, se abstendo da sua vida pessoal, "
@@ -270,6 +349,7 @@ int marcilio() {
             return 0;
           } else if (escolha == 2) {
             // Se escolher aproveitar
+
             cout << "Aproveitando os dias de folga, você não consegue "
                     "melhorar o tanto que gostaria, e chegando ao fim da "
                     "temporada, o clube vê que seu desempenho não é um dos "
@@ -281,6 +361,7 @@ int marcilio() {
           }
         } else if (escolha == 2) {
           // Se escolher em se conformar em ser reserva
+
           cout << "Conformado com a reserva e com as poucas entradas em "
                   "campo, assim fica até o final da temporada, e com o final "
                   "do contrato, o clube decide não renovar.\n";
@@ -334,6 +415,7 @@ int vasco() {
     return 0;
   } else if (escolha == 2) {
     // Se escolher exaltar o time adversário.
+
     cout << "Após essa entrevista, as pessoas veem a boa pessoa que você é, te "
             "dando destaques nas redes sociais, alavancando cada vez mais sua "
             "carreira.\n";
@@ -354,6 +436,7 @@ int vasco() {
       return 0;
     } else if (escolha == 2) {
       // Se escolher não comprar uma chuteira nova
+
       cout << "Depois de tanto destaque, você começa a perder rendimento nos "
               "treinos e nos campeonatos, sendo cada vez menos utilizado pelo "
               "técnico.\n";
@@ -420,7 +503,7 @@ int real() {
         return marcilio();
       } else if (escolha == 2) {
         // Se escolher continuar como goleiro titular.
-        
+
         cout << "Agora, como goleiro titular, está na hora de comprar suas "
                 "luvas profissionais.\n";
         cout << "1 - Comprar as luvas.\n";
@@ -456,7 +539,7 @@ int real() {
             return 0;
           } else if (escolha == 2 || escolha == 3) {
             // Se escolher ficar no meio ou pular para a esquerda
-            
+
             cout << "Infelizmente você não consegue defender o penalti.\n";
             cout << "Não sabendo lidar com seu erro, e com o hate recebido, "
                     "você decide se aposentar, chegando ao fim da sua "
@@ -468,8 +551,8 @@ int real() {
             return 0;
           }
         } else if (escolha == 2) {
-         // Se escolher não comprar as luvas 
-          
+          // Se escolher não comprar as luvas
+
           cout << "Assim como quaqluer outro atléta, seu desempenho "
                   "infelizmente vem caindo.\n";
           cout << "O técnico vê essa queda no desempenho, e te decide deixar "
@@ -495,7 +578,7 @@ int real() {
     }
   } else if (escolha == 2) {
     // Se escolher jogar de Meio Campo.
-    
+
     cout << "Mesmo dando 100% nos treinos, o técnico decide não te colocar em "
             "campo nenhuma vez.\n";
     cout << "Então você pode:\n";
